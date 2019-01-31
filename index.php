@@ -3,7 +3,7 @@ $url_array = array(
     array("http://stu2.rbru.ac.th/~s6015261015","first"),
     array("http://stu2.rbru.ac.th/~s6015261011","termcs"),
     array("http://stu2.rbru.ac.th/~s6015261005","dew"),
-    array("http://stu2.rbru.ac.th/~s60152610018","kim"),
+    array("http://stu2.rbru.ac.th/~s6015261005","dew"),
     array("http://stu2.rbru.ac.th/~s6015261003","bri")
 );
 
@@ -11,12 +11,11 @@ function create_link($u,$t){
     return "<a href=\"$u\">$t</a>";
 }
 function create_table($t){
-    echo '<table class="table">';
-        echo '<thead class="thead-dark">';
+        echo '<table class="table table-striped table-dark">';
+        echo '<thead class="#">';
         echo '<td>URL</td><td>Name</td>';
         echo '<thead>';
         echo '<tbody>';
-    echo '<table border="2">';
     for($i=0;$i<sizeof($t);$i++){
         echo '<tr>';
         for($j=0;$j<sizeof($t[$i]);$j++){
@@ -26,6 +25,7 @@ function create_table($t){
     }
     echo '</table>';
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +34,7 @@ function create_table($t){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
     <?php
